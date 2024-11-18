@@ -70,6 +70,14 @@ li {
 .listColor{
   background-color: #6ee0e0;
 }
+/* .formForUpdate {
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  display: none;
+} */
 .edit-Btn {
   background-color: #b9a3d1;
   border: none;
@@ -82,14 +90,7 @@ li {
 .edit-Btn:hover {
   background-color: #967bb6;
 }
-.formForUpdate {
-  margin-top: 10px;
-  padding: 10px;
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  display: none;
-}
+
 .formForUpdate input {
   margin-bottom: 10px;
   padding: 8px;
@@ -105,9 +106,7 @@ li {
   border-radius: 4px;
   cursor: pointer;
 }
-.update-Btn:hover {
-  background-color: #57bfbf;
-}
+
 form {
   background-color: #f8cd4f;
   padding: 15px;
@@ -126,16 +125,13 @@ form input {
   border: 1px solid #ddd;
   border-radius: 4px;
 }
-form button {
+form button, .buttonForCompleted {
   background-color: #e9679b;
   border: none;
   color: #fff;
   padding: 10px 15px;
   border-radius: 4px;
   cursor: pointer;
-}
-form button:hover {
-  background-color: #c4547d;
 }
 .col-sm-6{
   margin-left: 273px;
