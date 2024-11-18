@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+    <title>Habit Builder</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container-for-profile-ejs">
+
+    <div class="page-header text-center">
+        <h1><span class="fa fa-anchor"></span> Profile Page</h1>
+        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+    </div>
+
+    <div class="row">
+
+        <!-- LOCAL INFORMATION -->
+        <!-- <div class="col-sm-6">
+            <div class="well">
+                <h3><span class="fa fa-user"></span> Local</h3>
+
+                <% if (user.local.email) { %>
+                    <p>
+                        <strong>id</strong>: <%= user._id %><br>
+                        <strong>email</strong>: <%= user.local.email %><br>
+                        <strong>password</strong>: <%= user.local.password %>
+                    </p>
+
+                    <a href="/unlink/local" class="btn btn-default">Unlink</a>
+                <% } else { %>
+                    <a href="/connect/local" class="btn btn-default">Connect Local</a>
+                <% } %>
+
+            </div> -->
+        </div>
+        <div class="col-sm-6">
+          <h3>Habit Builder</h3>
+          <ul class="addingRecipe">
+          <% for(var i=0; i<habitTracker.length; i++) {%>
+            <li class="habittracker" data-id="<%= habitTracker[i]._id %>">
+              <span class="currentHabit"><%= habitTracker[i].habit %></span>
+              <span class="currentBuddy"><%=  habitTracker[i].accountabuddy %></span>
+              <span class="currentLength"><%= habitTracker[i].minHabitLenght %></span>
+              <span class="currentFrequency"><%= habitTracker[i].checkInFrequency %>
+              
+              </span>
+              <span><i class="fa fa-trash-o" aria-hidden="true"></i></span>
+              <button type="button" class="buttonForCompleted">Completed</button>
+              <button type="button" class="edit-Btn">Edit Habit</button>
+              
+              <form class="formForUpdate hidden">
+              <input class="newHabit" type="text" placeholder="Edit Habit" name="habit" value="<%= habitTracker[i].habit %>">
+              <input class="newBuddy" type="text" placeholder="Edit Accountabuddy" name="accountabuddy" value="<%=  habitTracker[i].accountabuddy %>">
+              <input class="newLength" type="text" placeholder="Edit Minimum Length" name="minHabitLenght" value="<%= habitTracker[i].minHabitLenght %>">
+              <input class="newFrequency" type="text" placeholder="Edit Check In Frequency" name="checkInFrequency" value="<%= habitTracker[i].checkInFrequency %>">
+              <button type="button" placeholder="Update" class="update-Btn" >Update</button>
+            </form>
+            </li>
+           
+          <% } %>
+          
+          </ul>
+
+          <h2>Habit Tracker</h2>
+        <% if (user.local.email) { %>
+          <form action="/habitTrackerRoute" method="POST">
+            <label for="habitListed">Habit Listed</label>
+            <input type="text" placeholder="Habit" name="habit">
+            <label for="accountabuddy">Accountabuddy</label>
+            <input type="text" placeholder="Accountabuddy" name="accountabuddy">
+            <label for="minHabitLength">Habit Length</label>
+            <input type="text" placeholder="Habit Lentgh" name="minHabitLenght">
+            <label for="checkInFrequency">Check In in Frequency</label>
+            <input type="text" placeholder="Check in Frequency" name="checkInFrequency">
+            
+            <button type="submit"> Submit</button>
+
+            <%#<select name="checkinFrequencyPick" id="checkinFrequencyPick">
+              <option value="daily">Daily</option>
+              <option value="weekly">Weekly</option>
+            </select>
+            %>
+          </form>
+         
+
+
+
+        </div>
+        <% } %>
+
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>
