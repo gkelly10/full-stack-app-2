@@ -1,13 +1,30 @@
 
-This project helps users build new habits and add in a accountabuddy to make sure they are being held accountable for the new habit they want to build.
+<strong>Habit Builder with Accountability Buddy</strong>
+
+A full-stack web application designed to help users build new habits with the added feature of an accountability buddy to ensure consistency. Users can create habits, track their progress, and invite someone to hold them accountable.
+
+
+
 
 ![Screenshot 2024-11-18 at 6 58 30 PM](https://github.com/user-attachments/assets/478a5e29-a2ec-44e7-a8c9-d4c45ce4fe79)
 
 
 
-Tech used: HTML, CSS, JavaScript, Mongodb, Node, Express, EJs.
+Features
+
+Create and track new habits
+
+Add an accountability buddy to keep you on track
+
+Simple and intuitive interface
 
 
-Lessons Learned:
-Having a routes file instead of everthing in the server was new. So something interesting to learn how to work with.
+Tech Stack
 
+Frontend: HTML, CSS, JavaScript
+
+Backend: Node.js, Express
+
+Database: MongoDB
+
+Templating Engine: EJS
